@@ -1,0 +1,80 @@
+.welcome {
+  height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.welcome p {
+  font-size: var(--fs-large);
+  margin-bottom: var(--spacing-medium);
+}
+
+/* Vrem ca ultimul paragraf sa nu aiba margine. */
+.welcome p:last-of-type {
+  margin-bottom: var(--spacing-xl);
+}
+
+.welcome p span {
+  color: var(--text-secondary);
+}
+
+.welcome a {
+  color: var(--text-light);
+  background-color: var(--button-color);
+
+  font-size: var(--fs-medium);
+  text-transform: uppercase;
+  text-align: center;
+
+  padding: var(--spacing-medium);
+  border: 2px solid var(--button-color);
+  border-radius: 5px;
+
+  width: 260px;
+}
+
+.welcome a:hover {
+  background-color: transparent;
+}
+
+.welcome img {
+  height: 24px;
+  width: auto;
+
+  margin-left: var(--spacing-medium);
+
+  position: relative;
+  top: var(--spacing-tiny);
+}
+
+.welcome .container {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .welcome h1 {
+    font-size: 2.5rem;
+  }
+
+  .welcome img {
+    display: block;
+    margin-top: var(--spacing-medium);
+    margin-left: var(--spacing-small);
+  }
+
+  .welcome {
+    padding-bottom: 4rem;
+  }
+
+  .welcome p:last-of-type {
+    margin-bottom: 0;
+  }
+
+  /* Asundem butonul pe mobil. */
+  .welcome a {
+    display: none;
+  }
+}
